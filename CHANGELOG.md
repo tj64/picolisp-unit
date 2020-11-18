@@ -1,5 +1,24 @@
 # Changelog
 
+## 3.1.0 (2020-09-10)
+
+  * Remove colour of output for 'passed' tests in default reporter, 10x speed increase when tests pass
+  * Update supported PicoLisp versions to 19.6, 19.12, 20.6, pil21
+
+## 3.0.0 (2019-04-19)
+
+  * Add Makefile for testing the library
+  * Update supported PicoLisp version to 18.12
+  * **Breaking change:** remove all support for PicoLisp namespaces
+
+## 2.1.0 (2017-03-23)
+
+  * Restore PicoLisp namespaces for backwards compatibility. Disable with PIL_NAMESPACES=false
+
+## 2.0.0 (2017-03-09)
+
+  * Remove the use of PicoLisp namespaces (functionally equivalent to 1.0.0)
+
 ## 1.0.0 (2015-06-09)
 
   * Production release

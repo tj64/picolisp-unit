@@ -1,6 +1,6 @@
 # Unit Testing framework for PicoLisp
 
-[![GitHub release](https://img.shields.io/github/release/aw/picolisp-unit.svg)](https://github.com/aw/picolisp-unit) [![Build Status](https://travis-ci.org/aw/picolisp-unit.svg?branch=master)](https://travis-ci.org/aw/picolisp-unit)
+[![GitHub release](https://img.shields.io/github/release/aw/picolisp-unit.svg)](https://github.com/aw/picolisp-unit) ![Build status](https://github.com/aw/picolisp-unit/workflows/CI/badge.svg?branch=master)
 
 This library can be used for Unit Testing your [PicoLisp](http://picolisp.com/) code.
 
@@ -16,11 +16,13 @@ Please read [EXPLAIN.md](EXPLAIN.md) to learn more about PicoLisp and this Unit 
   6. [Reporters](#reporters)
   7. [Alternatives](#alternatives)
   8. [Contributing](#contributing)
-  9. [License](#license)
+  9. [Changelog](#changelog)
+  10. [License](#license)
 
 # Requirements
 
-  * PicoLisp 32-bit or 64-bit v3.1.9+
+  * PicoLisp 32-bit or 64-bit `v3.1.9+`, or `pil21`
+  * Tested up to PicoLisp `v20.6.29`, [see test runs](https://github.com/aw/picolisp-unit/commit/1a455ba10058dffacfb3d4ef930c89ee82a57a83/checks)
 
 # Getting Started
 
@@ -37,10 +39,6 @@ This is a pure PicoLisp library with no external dependencies. You can either co
 Here are some guidelines on how to use `unit.l`, but you're free to poke around the code and use it as you wish.
 
 There exists a few public functions: `(execute)`, `(report)`, and a bunch of `(assert-X)` where X is a type of assertion.
-
-> **Note for 64-bit PicoLisp:** you can use `(symbols 'unit)` (or the prefix: `unit~`).
-
-> **Note for 32-bit PicoLisp:** you don't have access to `(symbols)`, so these functions might clash with existing ones.
 
   * **(execute arg1 ..)** Executes arg1 to argN tests
     - `arg1` _Quoted List_: a list of assertions, example `'(assert-nil NIL "I AM NIL")`
@@ -192,6 +190,10 @@ This testing library has its own set of tests (hehe). You can use those as examp
 
     ./test.l
 
+or
+
+    make check
+
 # Reporters
 
 If you don't call `(report)`, the test results will not be printed to the screen.
@@ -241,8 +243,12 @@ If you want to improve this library, please make a pull-request.
 
 * @cryptorick [Rick Hanson](https://github.com/cryptorick)
 
+# Changelog
+
+* [Changelog](CHANGELOG.md)
+
 # License
 
 [MIT License](LICENSE)
 
-Copyright (c) 2015 Alexander Williams, Unscramble <license@unscramble.jp>
+Copyright (c) 2015-2020 Alexander Williams, Unscramble <license@unscramble.jp>

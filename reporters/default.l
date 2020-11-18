@@ -2,10 +2,7 @@
 #
 # The MIT License (MIT)
 #
-# Copyright (c) 2015 Alexander Williams, Unscramble <license@unscramble.jp>
-
-(local *Colours print-report print-passed print-failed report-failed print-error)
-(local print-expected print-got exit-gracefully)
+# Copyright (c) 2020 Alexander Williams, Unscramble <license@unscramble.jp>
 
 (de *Colours  ("red"    . 1)
               ("green"  . 2)
@@ -39,10 +36,8 @@
     (exit-gracefully Failed_results) ]
 
 [de print-passed @
-  (prinl  (colour "green")
-          (char (hex "2713"))
+  (prinl  (char (hex "2713"))
           (align 2 " ")
-          (colour)
           (next) ) ]
 
 [de print-failed (Message)
